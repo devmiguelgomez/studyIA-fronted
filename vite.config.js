@@ -20,7 +20,7 @@ export default defineConfig({
     assetsDir: 'assets',
     emptyOutDir: true,
     sourcemap: true,
-    minify: 'terser',
+    minify: 'esbuild', // Cambiado de 'terser' a 'esbuild' que es el minificador nativo de Vite
     rollupOptions: {
       output: {
         manualChunks: {
