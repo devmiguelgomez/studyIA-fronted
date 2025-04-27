@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaCheck, FaTimes, FaSpinner } from 'react-icons/fa';
 
 const QuizQuestion = ({ 
@@ -13,6 +13,12 @@ const QuizQuestion = ({
 }) => {
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [openAnswer, setOpenAnswer] = useState('');
+  
+  // Resetear las selecciones cuando cambia la pregunta
+  useEffect(() => {
+    setSelectedAnswer('');
+    setOpenAnswer('');
+  }, [question]);
   
   const handleSubmit = (e) => {
     e.preventDefault();
