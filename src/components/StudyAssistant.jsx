@@ -296,7 +296,7 @@ const StudyAssistant = () => {
               ref={fileInputRef}
               onChange={handleFileChange}
               className="hidden"
-              accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+              accept=".pdf,.doc,.docx"
             />
             <button
               onClick={() => fileInputRef.current.click()}
@@ -304,7 +304,7 @@ const StudyAssistant = () => {
               data-cursor-pointer
             >
               <FaUpload className="mr-2" />
-              {document ? document.name : "Seleccionar archivo (PDF, Word, Imagen)"}
+              {document ? document.name : "Seleccionar archivo (PDF o Word)"}
             </button>
           </div>
 
